@@ -153,7 +153,26 @@ function appendToDisplay(value) {
 }
 
 // Bug Level 4 - Issue 2: Keyboard input not supported
-// Missing keyboard event listeners for better UX
+// Missing keyboard event listeners for better UXw
+document.addEventListener('keydown', function(event) {
+    const key = event.key;
+    if ((key >= '0' && key <= '9') || key === '.') {
+        appendToDisplay(key);
+        event.preventDefault();
+    } else if (key === '+' || key === '-' || key === '*' || key === '/') {
+        appendToDisplay(key);
+        event.preventDefault();
+    } else if (key === 'Enter' || key === '=') {
+        calculate();
+        event.preventDefault();
+    } else if (key === 'Backspace') {
+        deleteLast();
+        event.preventDefault();
+    } else if (key === 'c' || key === 'C') {
+        clearDisplay();
+        event.preventDefault();
+    }
+});
 
 // Bug Level 5 - Issue 1: Chain calculations don't work properly
 function calculate() {

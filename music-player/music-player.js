@@ -205,7 +205,7 @@ class MusicPlayer {
     pause() {
         this.audio.pause();
         this.isPlaying = false;
-        this.playPauseBtn.innerHTML = '<i class="fas fa-play text-2xl ml-1"></i>';
+        this.playPauseBtn.innerHTML = '<i class="fas fa-pause text-2xl ml-1"></i>';
         this.albumArt.classList.add('paused');
     }
 

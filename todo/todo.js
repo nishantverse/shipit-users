@@ -54,6 +54,8 @@ function renderTasks() {
         filteredTasks = tasks.filter(task => !task.completed);
     } else if (currentFilter === 'completed') {
         filteredTasks = tasks.filter(task => task.completed);
+    }else{
+        filteredTasks = tasks;
     }
     // Bug: 'all' filter doesn't properly show all tasks in some cases
     

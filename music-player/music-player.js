@@ -338,6 +338,16 @@ class MusicPlayer {
 
     handleKeyboardShortcuts(e) {
         // BUG LEVEL 4-2: Keyboard shortcuts work even in text inputs
+        const active = document.activeElement;
+        if (
+            active && (
+                active.tagName === 'INPUT' ||
+                active.tagName === 'TEXTAREA' ||
+                active.isContentEditable
+            )
+        ) {
+            return;
+        }
         switch(e.code) {
             case 'Space':
                 e.preventDefault();

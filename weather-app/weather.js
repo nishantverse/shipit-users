@@ -1,5 +1,5 @@
 // Global variables
-let apiKey = "dummyapikey"; 
+let apiKey = "835263014c7326ce4b23463255d21d53"; 
 let weatherDisplay = document.getElementById("weather-display");
 let errorDisplay = document.getElementById("error-display");
 

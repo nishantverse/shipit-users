@@ -9,7 +9,13 @@ let currentSort = 'none';
 window.onload = function() {
     updateCounts();
     renderTasks();
-
+    const taskInput = document.getElementById('task-input');
+    taskInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            addTask();
+        }
+    });
 };
 
 // Level 1 Bug 2: Enter key doesn't work for adding tasks

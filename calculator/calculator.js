@@ -146,6 +146,11 @@ function appendToDisplay(value) {
         }
     } else {
         // Bug: No check for multiple decimal points
+        if (value === '.' && currentInput.includes('.')){
+
+            return;
+        }
+
         currentInput += value;
     }
     

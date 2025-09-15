@@ -6,6 +6,11 @@ let currentSort = 'none';
 
 // Level 1 Bug 1: Missing initialization function call
 // The app should initialize on page load but doesn't
+window.onload = function() {
+    updateCounts();
+    renderTasks();
+
+};
 
 // Level 1 Bug 2: Enter key doesn't work for adding tasks
 function addTask() {

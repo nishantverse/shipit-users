@@ -76,6 +76,14 @@ function calculate() {
             result = prev * current;
             break;
         case '/':
+            if (current === 0) {
+                display.value = 'Error';
+                currentInput = '';
+                operator = '';
+                previousInput = '';
+                isNewCalculation = true;
+                return;
+            }
             result = prev / current; 
             break;
         default:

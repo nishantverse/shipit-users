@@ -16,7 +16,7 @@ function getWeather() {
     }
 
     errorDisplay.textContent = "";
-    weatherDisplay.innerHTML = "Loading... ";
+    weatherDisplay.innerHTML = "Loading ... ";
 
     fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`)
         .then((response) => {

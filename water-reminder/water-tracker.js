@@ -7,6 +7,10 @@ let waterLog = [];
 
 // Level 1 Bug 1: Missing initialization on page load
 // Page loads with empty progress, should show initial state
+window.addEventListener('DOMContentLoaded', () => {
+    updateProgress();
+    updateWaterLog();
+});
 
 // Level 1 Bug 2: Goal input doesn't validate properly
 function setGoal() {
